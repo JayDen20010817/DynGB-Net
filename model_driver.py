@@ -732,7 +732,7 @@ class MultimodalBartForConditionalGeneration(BartPretrainedModel):
             )
         return reordered_past
 
-# ----------------------------------------------------------- DATA UTILS ----------------------------------------------------------- #
+# ----------------------------------------------------------- Data Loading----------------------------------------------------------- #
 
 def read_json_data(path):
     f = open(path)
@@ -805,11 +805,11 @@ def prepare_dataset(text_path: str,
         del context
         del example_context_utterance
 
-    # Reading Audio Data
+    # Loading Audio Data
     acosutic_data = pd.read_pickle(acosutic_path)
     df['audio_features'] = acosutic_data['audio_feats']
     
-    # Reading Video Data
+    # Loading Video Data
     visaul_data = pd.read_pickle(visual_path)
     df['visual_features'] = visaul_data['video_feats']
  
@@ -979,7 +979,7 @@ def _save(model,
                     state_dict = model.state_dict()
                 unwrap_model(model).save_pretrained(output_dir, state_dict=state_dict)
             else:
-                # print("Trainer.model is not a `PreTrainedModel`, only saving its state dict.")原
+                # print("Trainer.model is not a `PreTrainedModel`, only saving its state dict.")
                 if state_dict is None:
                     state_dict = model.state_dict()
                 torch.save(state_dict, os.path.join(output_dir, WEIGHTS_NAME))
