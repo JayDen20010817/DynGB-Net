@@ -1,5 +1,5 @@
 - Place the text, audio, and video feature files in the format as described above in the following manner in the 'Data' folder:
-
+WITS Dataset_link：https://github.com/LCS2-IIITD/MAF.git
   - Data
 
     - Text
@@ -14,8 +14,8 @@
       - train_video.p
       - val_video.p
       - test_video.p
-
-    run model_driver.py file 
+    Subsequent install the dependencies mentioned in the requirement.txt.
+    Finally run model_driver.py file 
 
     
 
