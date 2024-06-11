@@ -14,8 +14,7 @@ WITS Dataset_link：https://github.com/LCS2-IIITD/MAF.git
       - train_video.p
       - val_video.p
       - test_video.p
-    Subsequent install the dependencies mentioned in the requirement.txt.
- <br />
+    Subsequent install the dependencies mentioned in the requirement.txt. <br />
     Finally run model_driver.py file 
 
     
